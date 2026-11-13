@@ -1,119 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khushi Banga | Genetics & AI Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khushi Banga | Biotechnology, Genetics & AI</title>
+  <meta name="description" content="Portfolio of Khushi Banga, B.Tech. Biotechnology, Genetics & Artificial Intelligence student at Lovely Professional University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
-  <header class="navbar">
-    <div class="nav-brand">
-      <div class="logo-box">🧬</div>
-      <div>
-        <div class="brand-name">
-          KHUSHI BANGA <span class="badge-year">B.TECH '30</span>
-        </div>
-        <div class="brand-sub">Biotechnology • Genetics • AI</div>
-      </div>
-    </div>
+  <!-- Top Navigation -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark">KB</span>
+        <span class="brand-name">Khushi Banga</span>
+        <span class="badge">B.Tech '30</span>
+      </a>
 
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#track-record">Track Record</a>
-      <a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#achievements" class="highlight-link">● Achievements</a>
-    </nav>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
 
-    <div class="nav-actions">
-      <a href="#certificates" class="btn-outline">📄 Dossier / CV</a>
-      <a href="mailto:khushibanga@example.com" class="btn-gradient">✈ Connect / Lab Visit</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#track-record">Track Record</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#connect" class="btn btn-primary btn-sm">Connect / Lab Visit</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="about" class="hero">
-    <div class="hero-left">
-      <div class="pill-row">
-        <span class="pill pill-cyan">● 1st-Year Undergraduate • Class of 2030</span>
-        <span class="pill pill-green">✔ B.Tech. Genetics & Artificial Intelligence</span>
-        <span class="pill pill-gold">🏅 Computational Biology & Genomics</span>
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero" id="about">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="pills">
+            <span class="pill">B.Tech. Biotechnology, Genetics &amp; AI</span>
+            <span class="pill">Lovely Professional University</span>
+            <span class="pill pill-accent">Class of 2030</span>
+          </div>
+          <h1>Building <span class="accent">genomic intelligence</span> and AI-driven bio-systems.</h1>
+          <p class="lead">
+            I'm Khushi Banga, a first-year undergraduate combining biotechnology, genetics and
+            artificial intelligence. I write Python and C++ to explore computational genomics,
+            bio-algorithms and data structures that turn biological data into insight.
+          </p>
+          <div class="cta-row">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#certificates" class="btn btn-outline">Certificates &amp; Honors</a>
+          </div>
+          <ul class="stack">
+            <li>Python 3</li>
+            <li>C++</li>
+            <li>Bio-Algorithms</li>
+            <li>Computational Genomics</li>
+            <li>Data Structures</li>
+          </ul>
+        </div>
+
+        <aside class="card pipeline" aria-label="Active academic pipeline">
+          <div class="pipeline-head">
+            <span class="dot"></span>
+            <h2>Active Academic Pipeline</h2>
+          </div>
+          <ul class="pipeline-list">
+            <li>
+              <div>
+                <strong>B.Tech. Biotechnology, Genetics &amp; AI</strong>
+                <span>Lovely Professional University · Year 1</span>
+              </div>
+              <em class="status status-live">In progress</em>
+            </li>
+            <li>
+              <div>
+                <strong>Python 3 &amp; C++ Programming</strong>
+                <span>Algorithms, data structures, problem solving</span>
+              </div>
+              <em class="status status-live">Active</em>
+            </li>
+            <li>
+              <div>
+                <strong>Computational Genomics &amp; Bio-Algorithms</strong>
+                <span>Sequence analysis and predictive modelling</span>
+              </div>
+              <em class="status status-next">Exploring</em>
+            </li>
+            <li>
+              <div>
+                <strong>Cisco Python Essentials 1 &amp; 2</strong>
+                <span>Certified</span>
+              </div>
+              <em class="status status-done">Completed</em>
+            </li>
+          </ul>
+        </aside>
       </div>
+    </section>
 
-      <h1 class="hero-title">
-        Pioneering <span class="text-cyan">Genomic</span> <span class="text-green">Intelligence</span> & Computational Bio-Systems.
-      </h1>
-
-      <p class="hero-bio">
-        I am a 19-year-old Biotechnology, Genetics & Artificial Intelligence undergraduate bridging algorithmic data systems, molecular genomics, and predictive bio-modeling. Building computational pipelines in Python & C++, exploring cellular genetics, and developing scalable bio-AI solutions from freshman year.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-gradient-lg">⚡ Explore Bio-AI Projects</a>
-        <a href="#certificates" class="btn-dark-lg">🎛 View Certificates & Credentials</a>
+    <!-- Track Record -->
+    <section class="section section-alt" id="track-record">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Track Record</span>
+          <h2>Milestones at a glance</h2>
+        </div>
+        <div class="grid grid-4">
+          <div class="card stat">
+            <div class="stat-num">2030</div>
+            <div class="stat-label">Class of 2030</div>
+            <p>B.Tech. at Lovely Professional University.</p>
+          </div>
+          <div class="card stat">
+            <div class="stat-num">2&times;</div>
+            <div class="stat-label">Cisco Certifications</div>
+            <p>Python Essentials 1 &amp; 2.</p>
+          </div>
+          <div class="card stat">
+            <div class="stat-num">88%</div>
+            <div class="stat-label">Merit Scholarship</div>
+            <p>Qualified via LPUNEST &amp; CUET UG.</p>
+          </div>
+          <div class="card stat">
+            <div class="stat-num">Gold</div>
+            <div class="stat-label">Chess Medal</div>
+            <p>District-level competitive chess.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Right Pipeline Status Card -->
-    <div class="hero-right">
-      <div class="status-card">
-        <div class="status-header">
-          <span class="status-dot">● ACADEMIC & LAB PIPELINE ACTIVE</span>
-          <span class="status-uni">LPU • GENETICS & AI</span>
-        </div>
-
-        <div class="status-row">
-          <span>Primary Focus</span>
-          <strong class="text-green">Computational Genomics & AI</strong>
-        </div>
-        <div class="status-row">
-          <span>Core Tech Stack</span>
-          <strong class="text-cyan">Python, C++, Bio-Algorithms</strong>
-        </div>
-        <div class="status-row">
-          <span>Academic Standing</span>
-          <strong>B.Tech. First Year (Class of 2030)</strong>
-        </div>
-        <div class="status-row">
-          <span>Certifications</span>
-          <strong class="text-purple">Cisco Python Essentials 1 & 2</strong>
+    <!-- Certificates & Achievements -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Certificates &amp; Achievements</span>
+          <h2>Credentials and honors</h2>
         </div>
 
-        <p class="status-footer">
-          Open to: Research internships, computational biology collaborations & bio-AI hackathons
-        </p>
+        <div class="grid grid-2">
+          <article class="card item">
+            <span class="tag">Certification</span>
+            <h3>Cisco Python Essentials 1</h3>
+            <p>Foundations of Python 3: syntax, data types, control flow, functions and core programming concepts.</p>
+          </article>
+          <article class="card item">
+            <span class="tag">Certification</span>
+            <h3>Cisco Python Essentials 2</h3>
+            <p>Intermediate Python: modules, packages, exceptions, object-oriented programming and string handling.</p>
+          </article>
+        </div>
+
+        <div class="grid grid-2 achievements" id="achievements">
+          <article class="card item">
+            <span class="tag tag-teal">Scholastic</span>
+            <h3>Merit Scholarship Qualified</h3>
+            <p>Met the 88% academic score threshold and qualified for a merit scholarship through LPUNEST and CUET UG.</p>
+          </article>
+          <article class="card item">
+            <span class="tag tag-teal">Competitive</span>
+            <h3>District-Level Gold Medalist, Chess</h3>
+            <p>Won gold at district level in competitive chess, building strategic thinking and focus under pressure.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 4 Metrics / Track Record Cards -->
-  <section id="track-record" class="stats-grid">
-    <div class="stat-card">
-      <div class="stat-num text-cyan">2030</div>
-      <div class="stat-label">B.TECH. GRADUATION TRACK</div>
-      <div class="stat-sub">Biotechnology, Genetics & AI</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num text-green">2+</div>
-      <div class="stat-label">INDUSTRY CERTIFICATIONS</div>
-      <div class="stat-sub">Cisco Python Essentials 1 & 2</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num text-teal">88%</div>
-      <div class="stat-label">MERIT SCHOLARSHIP SCORE</div>
-      <div class="stat-sub">LPUNEST & CUET UG Qualified</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num text-purple">1st</div>
-      <div class="stat-label">DISTRICT CHESS MEDALIST</div>
-      <div class="stat-sub">Gold Medal Competitive Winner</div>
-    </div>
-  </section>
+    <!-- Featured Inventions & Systems -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Featured Inventions &amp; Systems</span>
+          <h2>Concepts I'm building toward</h2>
+        </div>
+        <div class="grid grid-2">
+          <article class="card project">
+            <div class="project-top">
+              <span class="tag">Concept</span>
+              <span class="tech">Python · C++</span>
+            </div>
+            <h3>Genomic Sequence Analyzer</h3>
+            <p>A tool concept for reading DNA/RNA sequences, computing GC content, finding motifs and comparing sequences using efficient string algorithms and data structures.</p>
+            <ul class="bullets">
+              <li>Sequence parsing and validation</li>
+              <li>Motif and pattern matching</li>
+              <li>Alignment-style comparison</li>
+            </ul>
+            <a href="#connect" class="link">Discuss this project &rarr;</a>
+          </article>
 
-  <!-- Certificates & Achievements Section -->
-  <section id="certificates" class="showcase-section">
-    <div class="section-top
+          <article class="card project">
+            <div class="project-top">
+              <span class="tag tag-teal">Concept</span>
+              <span class="tech">Python · Machine Learning</span>
+            </div>
+            <h3>Bio-AI Predictive Model</h3>
+            <p>A predictive modelling concept that applies machine learning to biological datasets, looking for patterns that could support genetic and biomedical insight.</p>
+            <ul class="bullets">
+              <li>Feature engineering from biological data</li>
+              <li>Model training and evaluation</li>
+              <li>Interpretable, reproducible results</li>
+            </ul>
+            <a href="#connect" class="link">Discuss this project &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect -->
+    <section class="section" id="connect">
+      <div class="container">
+        <div class="card connect">
+          <div>
+            <span class="eyebrow">Connect / Lab Visit</span>
+            <h2>Let's collaborate</h2>
+            <p>Open to research conversations, lab visits and student collaborations in computational biology and AI.</p>
+          </div>
+          <div class="cta-row">
+            <!-- Replace the placeholders below with your real links -->
+            <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me</a>
+            <a href="https://www.linkedin.com/in/your-handle" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/your-username" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Khushi Banga</span>
+      <span>B.Tech. Biotechnology, Genetics &amp; AI · LPU</span>
+    </div>
+  </footer>
+
+</body>
+</html>
