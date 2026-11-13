@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="progress" id="progress"></div>
 
   <header class="nav">
     <div class="container nav-inner">
@@ -36,11 +37,13 @@
 
     <!-- Hero -->
     <section class="hero">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="status-badge"><span class="dot"></span>Open to Policy Research &amp; Civic Tech Internships</span>
           <h1>Khushi Banga</h1>
           <p class="tagline">B.Tech Genetics &amp; Artificial Intelligence · Year 1 <span class="sep">|</span> Aspiring Civil Servant (IAS)</p>
+          <p class="rotator">Exploring <strong id="rotator">AI in Governance</strong><span class="caret"></span></p>
           <p class="lead">
             I want to bridge the gap between emerging science and grassroots governance. Currently a
             first-year student exploring how artificial intelligence, genomics, and data-driven policy
@@ -76,6 +79,8 @@
       </div>
     </section>
 
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>AI in Governance</span><span>Genomics</span><span>Public Health Policy</span><span>Bio-Ethics</span><span>Python</span><span>C++</span><span>Computational Biology</span><span>UPSC CSE</span><span>Civic Tech</span><span>AI in Governance</span><span>Genomics</span><span>Public Health Policy</span><span>Bio-Ethics</span><span>Python</span><span>C++</span><span>Computational Biology</span><span>UPSC CSE</span><span>Civic Tech</span></div></div>
+
     <!-- 01 About -->
     <section class="section section-alt" id="about">
       <div class="container">
@@ -93,8 +98,8 @@
           </div>
           <div class="counters">
             <div class="card counter"><strong>1st</strong><span>Year at LPU</span></div>
-            <div class="card counter"><strong>2030</strong><span>Target UPSC Horizon</span></div>
-            <div class="card counter"><strong>2 Domains</strong><span>Bio-Tech &amp; Public Policy</span></div>
+            <div class="card counter"><strong><span data-count="2030" data-from="2000">2030</span></strong><span>Target UPSC Horizon</span></div>
+            <div class="card counter"><strong><span data-count="2" data-from="0">2</span> Domains</strong><span>Bio-Tech &amp; Public Policy</span></div>
           </div>
         </div>
       </div>
@@ -203,7 +208,7 @@
           <span class="eyebrow">02 — Credentials</span>
           <h2>Certifications &amp; achievements</h2>
         </div>
-        <div class="grid grid-2">
+        <div class="grid grid-3">
           <article class="card item">
             <span class="tag">Technical Certification</span>
             <h3>Cisco Python Essentials 1 &amp; 2</h3>
@@ -215,14 +220,9 @@
             <p>Participation in national competitions, contributing to citizen-centric public outreach.</p>
           </article>
           <article class="card item">
-            <span class="tag tag-teal">Competitive Discipline</span>
-            <h3>District-Level Gold Medalist, Chess</h3>
-            <p>Tournament-level success that reflects strategic foresight, calm decision-making under pressure, and problem-solving.</p>
-          </article>
-          <article class="card item">
-            <span class="tag tag-teal">Scholastic Merit</span>
-            <h3>Merit Scholarship Qualified</h3>
-            <p>Met the 88% academic score threshold and qualified through LPUNEST and CUET UG.</p>
+            <span class="tag tag-teal">Scholarship</span>
+            <h3>Scholarship from LPUNEST &amp; CUET UG</h3>
+            <p>Scholarship at Lovely Professional University through LPUNEST and CUET UG.</p>
           </article>
         </div>
       </div>
@@ -238,9 +238,9 @@
           </div>
           <div class="cta-row">
             <!-- Replace placeholders with your real links -->
-            <a href="https://www.linkedin.com/in/your-handle" class="btn btn-primary" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/your-username" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-            <a href="mailto:your-email@example.com" class="btn btn-outline">Email</a>
+            <a href="https://www.linkedin.com/in/khushi-banga-202430448/" class="btn btn-primary" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/KhushiBanga24" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:khushibanga24@gmail.com" class="btn btn-outline">Email</a>
           </div>
         </div>
       </div>
@@ -253,6 +253,74 @@
       <span>B.Tech Genetics &amp; AI · LPU, Punjab</span>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    var root = document.documentElement, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    root.classList.add('js');
+
+    /* Scroll progress bar + nav shadow */
+    var bar = document.getElementById('progress'), nav = document.querySelector('.nav');
+    function onScroll() {
+      var h = document.documentElement.scrollHeight - innerHeight;
+      bar.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%';
+      nav.classList.toggle('scrolled', scrollY > 10);
+    }
+    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+    /* Rotating typewriter line */
+    var words = ['AI in Governance', 'Genomics & Public Health', 'Bio-Ethics & Tech Regulation', 'Civil Services & Policy'];
+    var el = document.getElementById('rotator'), w = 0, c = words[0].length, del = true;
+    if (!reduce) (function tick() {
+      var word = words[w];
+      c += del ? -1 : 1; el.textContent = word.slice(0, c);
+      var t = 55;
+      if (del && c === 0) { del = false; w = (w + 1) % words.length; t = 250; }
+      else if (!del && c === word.length) { del = true; t = 1700; }
+      setTimeout(tick, t);
+    })();
+
+    /* Scroll reveal */
+    var targets = document.querySelectorAll('.section-head, .card, .about-copy, .quote, .timeline li, .tags li, .facts div');
+    targets.forEach(function (n, i) { n.classList.add('reveal'); n.style.transitionDelay = (i % 4) * 80 + 'ms'; });
+
+    /* Count-up numbers */
+    function count(n) {
+      var to = +n.dataset.count, from = +n.dataset.from || 0, start = null;
+      if (reduce) return;
+      (function step(ts) {
+        start = start || ts; var p = Math.min((ts - start) / 1400, 1);
+        n.textContent = Math.round(from + (to - from) * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step);
+      })(performance.now());
+    }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('in'); io.unobserve(e.target);
+          e.target.querySelectorAll('[data-count]').forEach(count);
+        });
+      }, { threshold: .15 });
+      targets.forEach(function (n) { io.observe(n); });
+
+      /* Active nav link */
+      var links = document.querySelectorAll('.nav-links a[href^="#"]:not(.btn)');
+      var so = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      links.forEach(function (a) { var s = document.querySelector(a.getAttribute('href')); if (s) so.observe(s); });
+    } else { targets.forEach(function (n) { n.classList.add('in'); }); }
+
+    /* Close mobile menu after tapping a link */
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-toggle').checked = false; });
+    });
+  })();
+  </script>
 
 </body>
 </html>
